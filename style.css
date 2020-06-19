@@ -1,0 +1,69 @@
+@font-face {
+    font-family: Zelda;
+    src: url("The Wild Breath of Zelda.otf") format("opentype");
+}
+
+body {
+  width: 875px;
+  height: 500px;
+  max-width: 875px;
+  max-height: 500px;
+  position: relative;
+  display: block;
+  margin: 0px;
+  overflow: hidden;
+}
+
+#overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 100;
+}
+
+#machine-container {
+  top: 250px;
+  width: 100%;
+  /*position: relative;*/
+}
+
+#machine {
+  /*left: 280px;*/
+  top: 175px;
+  width:100%;
+  /*width: 300px;*/
+  /*max-width: 400px;*/
+  position: relative;
+  overflow: hidden;
+}
+
+.slot-tile {
+  font-family: Zelda;
+  font-size: 50pt; /* do this dynamically */
+  position: relative;
+  text-align: center;
+  width: 100%;
+  background-image: url(BG_Texture.png);
+  background-size: cover;
+  border-top: 5px solid black;
+  border-left: none;
+  border-right: none;
+}
+
+.carousel-spin {
+  animation: fast-spin 1s linear infinite;
+}
+
+.carousel-stop {
+  animation: spin-to-first 1500ms linear;
+}
+
+@keyframes fast-spin {
+  0%    { top: -400%; }
+  100%  { top: 0px; }
+}
+
+@keyframes spin-to-first {
+  0%    { top: -150%; }
+  100%  { top: 0px; } /* need to spin to second*/
+}
