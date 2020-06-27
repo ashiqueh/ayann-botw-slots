@@ -23,14 +23,15 @@ body {
 
 #machine-container {
   top: 250px;
-  width: 100%;
+  width: 500px;
   /*position: relative;*/
 }
 
 #machine {
   /*left: 280px;*/
-  top: 175px;
-  width:100%;
+  top: 145px;
+  width: 500px;
+  margin-left: 165px;
   /*width: 300px;*/
   /*max-width: 400px;*/
   position: relative;
@@ -39,16 +40,37 @@ body {
 
 .slot-tile {
   font-family: Zelda;
-  font-size: 50pt; /* do this dynamically */
+  font-size: 18pt; 
   position: relative;
   text-align: center;
-  width: 100%;
+  width: 500px;
+  display: inline-block;
+  min-height: 60px;
+  max-height: 60px;
+  text-overflow: ellipsis;
   background-image: url(BG_Texture.png);
   background-size: cover;
   border-top: 5px solid black;
   border-left: none;
   border-right: none;
+  margin-left: 20px;
+  margin-right: 20px;
+  /*word-wrap: break-word;*/
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /*padding-top: 15px;*/
+  line-height: 22px;
+  word-break: break-all;
+  hyphens: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 5px;
+  box-sizing: border-box;
 }
+
+/*.small-font {*/
+  /*font-size: 16pt;*/
+/*}*/
 
 .carousel-spin {
   animation: fast-spin 1s linear infinite;
