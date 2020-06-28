@@ -17,7 +17,17 @@ function generateLabels() {
 }
 
 let prevLabels = null;
-let labels = generateLabels()
+
+function readLocalList() {
+  var res;
+  $.get('slots.txt', function(data) {
+   res = data.split("\n");
+  }, 'text');
+  return res;
+}
+
+let labels = default_labels.split("\n");
+
 
 function populateSlots() {
   for (i = 0; i < labels.length; i++) {
